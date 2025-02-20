@@ -23,7 +23,6 @@ func schrijfGedicht(kleur string) {
 	}
 
 	fmt.Println(gedicht)
-	fmt.Printf("Gedicht over %s succesvol weergegeven.\n", kleur)
 
 	fmt.Print("Druk op Enter om af te sluiten...")
 	reader := bufio.NewReader(os.Stdin)
