@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 )
@@ -11,6 +12,8 @@ func schrijfGedicht(kleur string) {
 		"rood":   "Rood met passie.",
 		"geel":   "Geel als de stralen van de zon.",
 		"groen":  "Groen van de natuur.",
+		"oranje": "Oranje, vrolijk en warm.",
+		"paars":  "Paars, mysterieus en diep.",
 	}
 
 	gedicht, gevonden := gedichten[kleur]
@@ -19,7 +22,12 @@ func schrijfGedicht(kleur string) {
 		os.Exit(1)
 	}
 
-    fmt.Println(gedicht)
+	fmt.Println(gedicht)
+	fmt.Printf("Gedicht over %s succesvol weergegeven.\n", kleur)
+
+	fmt.Print("Druk op Enter om af te sluiten...")
+	reader := bufio.NewReader(os.Stdin)
+	reader.ReadString('\n')
 }
 
 func main() {
