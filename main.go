@@ -31,7 +31,7 @@ func schrijfGedicht(kleur string) {
 
 func main() {
 	var kleur string
-	fmt.Print("Voer een kleur in: ")
+	fmt.Print("Voer je lievelingskleur in: ")
 	fmt.Scanln(&kleur)
 
 	schrijfGedicht(kleur)
